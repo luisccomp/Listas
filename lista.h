@@ -29,6 +29,13 @@ int insere_inicio(Lista *l, Aluno a);
 void libera_lista(Lista *l);
 
 /**
+ * Exibe todos os valores armazenados na lista encadeada.
+ * @param l: um ponteiro para lista.
+ * @return: codigo de erro da função.
+ */
+int print_lista(Lista *l);
+
+/**
  * Remove um elemento do inicio da lista.
  * @param l: uma lista encadeada.
  * @param a: um ponteiro para aluno. Esse ponteiro armazena o valor removido

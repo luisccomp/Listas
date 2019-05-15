@@ -21,6 +21,13 @@ Pilha *cria_pilha();
 void libera_pilha(Pilha *p);
 
 /**
+ * Exibe o conteúdo da pilha.
+ * @param p: ponteiro para pilha.
+ * @return: codigo de erro da funcao.
+ */
+int print_pilha(Pilha *p);
+
+/**
  * Remove um elemento do topo da pilha.
  * @param p: um ponteiro para pilha.
  * @param a: um ponteiro para aluno para armazenar o valor removido.

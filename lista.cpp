@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "lista.h"
@@ -69,6 +70,26 @@ int insere_inicio(Lista *l, Aluno a) {
     novo_no->prox = l->head;
     l->head = novo_no;
     l->qtd ++;
+
+    return LIST_SUCCESS;
+}
+
+/**
+ * Exibe todos os valores armazenados na lista encadeada.
+ * @param l: um ponteiro para lista.
+ * @return: codigo de erro da função.
+ */
+int print_lista(Lista *l) {
+    if (!l)
+        return LIST_NULL_POINTER_ERROR;
+
+    No *atual = l->head;
+
+    while (atual) {
+        printf("---------------------\n");
+        printf("Nome: %s\n", (atual->a).nome);
+        printf("Matricula: %d\n", (atual->a).matricula);
+    }
 
     return LIST_SUCCESS;
 }

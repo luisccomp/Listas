@@ -40,6 +40,18 @@ void libera_pilha(Pilha *p) {
 }
 
 /**
+ * Exibe o conteúdo da pilha.
+ * @param p: ponteiro para pilha.
+ * @return: codigo de erro da funcao.
+ */
+int print_pilha(Pilha *p) {
+    if (p == NULL)
+        return STACK_NULL_POINTER_ERROR;
+
+    return print_lista(p->l);
+}
+
+/**
  * Remove um elemento do topo da pilha.
  * @param p: um ponteiro para pilha.
  * @param a: um ponteiro para aluno para armazenar o valor removido.
